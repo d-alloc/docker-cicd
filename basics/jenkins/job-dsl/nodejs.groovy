@@ -32,7 +32,7 @@ job('NodeJS Docker') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('d-alloc/docker-nodejs-demo') //qa / dev
+            repositoryName('dalloc/docker-nodejs-demo') //qa / dev
             buildContext('./basics')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
