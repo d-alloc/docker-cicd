@@ -1,6 +1,6 @@
 job('NodeJS Moshe') {
     scm {
-        git('git://github.com/yanivomc/docker-cicd.git') {  node -> // is hudson.plugins.git.GitSCM
+        git('git://github.com/d-alloc/docker-cicd.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('DSL User')
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
@@ -19,7 +19,7 @@ job('NodeJS Moshe') {
 
 job('NodeJS Docker') {
     scm {
-        git('git://github.com/yanivomc/docker-cicd.git') {  node -> // is hudson.plugins.git.GitSCM
+        git('git://github.com/d-alloc/docker-cicd.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('DSL User')
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
@@ -32,7 +32,7 @@ job('NodeJS Docker') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('yanivomc/docker-nodejs-demo') //qa / dev
+            repositoryName('d-alloc/docker-nodejs-demo') //qa / dev
             buildContext('./basics')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
