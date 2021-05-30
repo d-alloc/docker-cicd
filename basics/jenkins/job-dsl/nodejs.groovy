@@ -13,7 +13,7 @@ job('NodeJS Moshe') {
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
     steps {
-        shell("npm install agaim")
+        shell("npm install again")
     }
 }
 
