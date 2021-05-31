@@ -1,4 +1,4 @@
-node any {
+node {
    def commit_id
    stage('step a') {
      checkout scm
